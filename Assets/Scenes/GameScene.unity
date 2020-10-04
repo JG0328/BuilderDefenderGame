@@ -279,8 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaac1d0a24227cb47a5d45140f5aebe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfWoodHarvester: {fileID: 2361311297225016170, guid: 784ba3f260c26814aa0e48bd991dee6e,
-    type: 3}
 --- !u!1 &1281340542
 GameObject:
   m_ObjectHideFlags: 0
