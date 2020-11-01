@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5418989410099968439}
   - component: {fileID: 4075326090340790244}
+  - component: {fileID: 192023672961350614}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,6 +82,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &192023672961350614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447722151234612146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c479b579ff2342f44859739e5995ed4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runOnce: 1
+  positionOffsetY: 0
 --- !u!1 &4754111293583016391
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +107,7 @@ GameObject:
   - component: {fileID: 2361311297225016170}
   - component: {fileID: -5858989266180588949}
   - component: {fileID: 4440738683633954468}
+  - component: {fileID: 8926274894886514353}
   m_Layer: 0
   m_Name: pfWoodHarvester
   m_TagString: Untagged
@@ -139,3 +155,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingType: {fileID: 11400000, guid: 6889a38439e3c404aadffe51ef682211, type: 2}
+--- !u!61 &8926274894886514353
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4754111293583016391}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02863121, y: -0.2791555}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.0391035, y: 4.1064897}
+  m_EdgeRadius: 0
