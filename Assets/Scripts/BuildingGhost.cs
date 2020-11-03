@@ -2,47 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingGhost : MonoBehaviour
-{
+public class BuildingGhost : MonoBehaviour {
+
     private GameObject spriteGameObject;
 
-    private void Awake()
-    {
+    private void Awake() {
         spriteGameObject = transform.Find("sprite").gameObject;
 
         Hide();
     }
 
-    private void Start()
-    {
+    private void Start() {
         BuildingManager.Instance.OnActiveBuildingTypeChanged += BuildingManager_OnActiveBuildingTypeChanged;
     }
 
-    private void BuildingManager_OnActiveBuildingTypeChanged(object sender, BuildingManager.OnActiveBuildingTypeChangedEventArgs eventArgs)
-    {
-        if (eventArgs.activeBuildingType == null)
-        {
+    private void BuildingManager_OnActiveBuildingTypeChanged(object sender, BuildingManager.OnActiveBuildingTypeChangedEventArgs e) {
+        if (e.activeBuildingType == null) {
             Hide();
-        }
-        else
-        {
-            Show(eventArgs.activeBuildingType.sprite);
+        } else {
+            Show(e.activeBuildingType.sprite);
         }
     }
 
-    private void Update()
-    {
+    private void Update() {
         transform.position = UtilsClass.GetMouseWorldPosition();
     }
 
-    private void Show(Sprite ghostSprite)
-    {
+    private void Show(Sprite ghostSprite) {
         spriteGameObject.SetActive(true);
         spriteGameObject.GetComponent<SpriteRenderer>().sprite = ghostSprite;
     }
 
-    private void Hide()
-    {
+    private void Hide() {
         spriteGameObject.SetActive(false);
     }
+
+
 }
