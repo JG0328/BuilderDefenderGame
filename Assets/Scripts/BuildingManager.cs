@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
-    public Transform pfWoodHarvester;
-
+    private BuildingTypeListSO buildingTypeList;
+    private BuildingTypeSO buildingType;
     private Camera mainCamera;
+
+    private void Awake()
+    {
+        buildingTypeList = Resources.Load<BuildingTypeListSO>(typeof(BuildingTypeListSO).Name);
+        buildingType = buildingTypeList.list[0];
+    }
 
     private void Start()
     {
@@ -17,7 +23,17 @@ public class BuildingManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(pfWoodHarvester, GetMouseWorldPosition(), Quaternion.identity);
+            Instantiate(buildingType.prefab, GetMouseWorldPosition(), Quaternion.identity);
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            buildingType = buildingTypeList.list[0];
+        }
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            buildingType = buildingTypeList.list[1];
         }
     }
 
